@@ -1,0 +1,30 @@
+/* Importar la fuente directamente desde tu archivo CSS */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
+
+
+/* Estilos globales personalizados */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Regla para subir de nivel al cargar una imagen desde CSS */
+.hero-background {
+    background-image: url('../img/patron-fondo.png'); /* Usa ../ para salir de css/ e ingresar a img/ */
+}
+
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+
+header .contenedor-logo {
+    width: 200px; /* Tamaño del div en el header */
+    height: 50px;
+}
+
+header .contenedor-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+}
+
+
