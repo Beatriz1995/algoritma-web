@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritma: Creamos Soluciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="img/icono.ico">
+    <!-- Iconos Lucide para el Check y UI -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/express.js" defer></script>
+    <script src="js/modal-pago.js" defer></script>
+</head>
+<body class="bg-gray-100 text-slate-800">
+
+    <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="contenedor-logo">
+                <img src="img/logo.png" alt="Algoritma">
+            </div>
+            <nav class="space-x-6 text-sm font-semibold text-slate-600">
+                <a href="#dudas" class="hover:text-indigo-600 transition">¿Tienes dudas?</a>
+                <a onclick="abrirModalCheckout()" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Comprar Ahora</a>
+            </nav>
+        </div>
+    </header>  
+
+    <!-- CONTENIDO PRINCIPAL DE LA CONFIGURACIÓN -->
+    <main class="max-w-7xl mx-auto px-6 py-10 flex-1 w-full">
+
+        <section class="max-w-6xl mx-auto  px-6 grid grid-cols-1 left-1">
+        <!-- Títulos Superiores -->
+           <div class="text-left">
+              <h1 class="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight leading-none mb-6">
+                Configura tu<span class="text-indigo-600"> página express</span>
+              </h1>
+            
+              <p class="text-lg text-slate-600 mb-8 max-w-xl">
+                Elige un diseño predefinido, ingresa los datos de tu negocio y mira cómo lucirá tu marca antes de pagar.
+              </p>
+           </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- COLUMNA IZQUIERDA: PERSONALIZACIÓN VISUAL E INFORMACIÓN -->
+            <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm lg:col-span-5 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-8">
+                
+                <!-- Sección de Colores -->
+                <div>
+                    <h3 class="text-sm font-bold text-gray-500 tracking-wider mb-4">Personalización Visual</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
+                        <!-- Paso 1: Color Principal -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-2">Paso 1: Selecciona color principal</label>
+                            <div class="relative w-36 h-36 mx-auto bg-gradient-to-tr from-gray-100 to-gray-50 rounded-full flex items-center justify-center shadow-inner border border-gray-200">
+                                <!-- Selector de color tipo Rueda (Nativo simplificado para compatibilidad) -->
+                                <input type="color" id="primaryColorPicker" value="#2563eb" class="absolute w-28 h-28 rounded-full cursor-pointer border-0 p-0 overflow-hidden [&::-webkit-color-swatch-wrapper]:p-0 [&::-webkit-color-swatch]:border-0 [&::-webkit-color-swatch]:rounded-full shadow-md transition transform hover:scale-105">
+                            </div>
+                            <span class="block text-center text-xs text-gray-500 mt-2 font-medium">Click al centro para cambiar</span>
+                        </div>
+
+                        <!-- Paso 2: Sugerencias Secundarias -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-3">Paso 2: Sugerencias de secundario</label>
+                            <div id="secondarySuggestionsContainer" class="grid grid-cols-2 gap-2">
+                                <!-- Cargado dinámicamente por JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campos de Texto del Negocio -->
+                <div class="space-y-4 pt-4 border-t border-gray-100">
+                    <h3 class="text-sm font-bold text-gray-500 tracking-wider">Información de Negocio</h3>
+                    
+                    <div>
+                        <label for="businessName" class="block text-sm font-semibold text-gray-700 mb-1">Nombre del negocio</label>
+                        <input type="text" id="businessName" placeholder="Ej. Técnicos en Aire Acondicionado López" class="w-full px-4 h-12 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition text-sm">
+                    </div>
+
+                    <div>
+                        <label for="businessDescription" class="block text-sm font-semibold text-gray-700 mb-1">Descripción corta</label>
+                        <textarea id="businessDescription" rows="3" placeholder="Ej. Reparación e instalación inmediata de minisplits las 24 horas con garantía por escrito." class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition text-sm resize-none"></textarea>
+                    </div>
+
+                    <!-- Cargar Logo (Opcional) -->
+                    <div class="mt-4">
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">
+                            Logo del negocio <span class="text-xs text-gray-700 font-normal">(Opcional)</span>
+                        </label>
+                        <input 
+                            type="file" 
+                            id="businessLogo" 
+                            accept="image/*"
+                            class="block w-full text-xs text-gray-700 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 border border-gray-200 rounded-xl cursor-pointer bg-slate-50/50 p-1"
+                        >
+                    </div>
+
+
+                    <div class="col-span-full mt-6 bg-slate-50 border border-slate-200 border-dashed rounded-xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-800">¿Ninguna plantilla encaja con tu negocio? 🤔</h4>
+                            <p class="text-xs text-slate-500 mt-1">Podemos diseñar una página 100% a la medida de tu marca.</p>
+                        </div>
+                        <button onclick="abrirWhatsAppPersonalizado()" class="flex-shrink-0 bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 text-xs font-semibold py-2 px-4 rounded-lg transition">
+                            Cotizar diseño personalizado
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA: GALERÍA DE 6 PLANTILLAS -->
+            <div class="lg:col-span-7 space-y-4 mb-12">
+                <h3 class="text-sm font-bold text-gray-500 tracking-wider px-2">Galería de Plantillas (One-Page)</h3>
+                
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-start" id="templatesGallery">
+                <!-- Las tarjetas dinámicas -->
+            </div>
+            </div>
+        </div>
+
+        <!-- MODAL / CONTENEDOR EXPANDIBLE DE PREVISUALIZACIÓN IN SITU -->
+        <div id="expandedPreviewContainer" class="fixed inset-0 z-50 hidden bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4 md:p-6 transition-all duration-300">
+            
+            <!-- Ventana flotante estilo navegador -->
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-2xl overflow-hidden w-full max-w-6xl h-[90vh] flex flex-col relative animate-in fade-in zoom-in duration-200">
+                
+                <!-- Barra superior tipo navegador web -->
+                <div class="bg-slate-900 px-4 py-3 flex items-center justify-between border-b border-slate-800 shrink-0">
+                    <!-- Botones de control estéticos -->
+                    <div class="flex items-center gap-1.5 w-20">
+                        <span class="w-3 h-3 bg-red-500 rounded-full inline-block"></span>
+                        <span class="w-3 h-3 bg-yellow-500 rounded-full inline-block"></span>
+                        <span class="w-3 h-3 bg-green-500 rounded-full inline-block"></span>
+                    </div>
+
+                    <!-- URL falsa dinámica -->
+                    <div class="bg-slate-800 text-slate-300 text-xs px-4 py-1.5 rounded-md w-full max-w-md text-center font-mono truncate" id="previewUrlBar">
+                        demo.algoritma.com/express
+                    </div>
+
+                    <!-- Botón para CERRAR el Modal -->
+                    <div class="w-20 flex justify-end">
+                        <button 
+                            id="btnClosePreview" 
+                            type="button" 
+                            class="text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg p-1 transition-colors flex items-center justify-center"
+                            title="Cerrar Previsualización"
+                        >
+                            <i data-lucide="x" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- El Marco con el iframe en pantalla completa -->
+                <div class="w-full flex-1 bg-slate-50 relative">
+                    <iframe 
+                        id="previewIframe" 
+                        src="" 
+                        class="w-full h-full border-0" 
+                        title="Previsualización de la Plantilla">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+        <!-- MODAL DE CHECKOUT HÍBRIDO CON FORMULARIO DE TARJETA -->
+    <div id="checkoutModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden border border-slate-100 relative animate-fade-in max-h-[90vh] flex flex-col">
+            
+            <!-- Header del Modal -->
+            <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+            <div class="flex items-center gap-2">
+                <div class="w-40 h-20 flex-shrink-0 bg-white border border-slate-200/80 rounded-xl p-2 flex items-center justify-center shadow-xs">
+                    <img id="modalHeaderLogo" src="img/logo.png" alt="Algoritma" class="max-w-full max-h-full object-contain">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-slate-800 leading-tight">Confirmar Pedido Express</h3>
+                    <p class="text-xl text-slate-500">Tu sitio web estará listo y publicado en 24 a 48 horas</p>
+                </div>
+            </div>
+            <button onclick="cerrarModalCheckout()" class="text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-200/60 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            </div>
+
+            <!-- Cuerpo del Modal (2 Columnas) -->
+            <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6 overflow-y-auto">
+            
+            <!-- COLUMNA IZQUIERDA: PAGO CON TARJETA (7 cols) -->
+            <div class="md:col-span-7 space-y-4">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">1. Datos de Facturación y Pago</h4>
+                
+                <form id="paymentForm" onsubmit="procesarPago(event)" class="space-y-3">
+                <!-- Nombre y Email -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Nombre Completo</label>
+                    <input type="text" id="checkoutNombre" required placeholder="Ej: Juan Pérez" class="w-full text-xs p-2.5 border border-slate-200 rounded-lg focus:outline-none focus:border-blue-600">
+                    </div>
+                    <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Correo Electrónico</label>
+                    <input type="email" id="checkoutEmail" required placeholder="juan@ejemplo.com" class="w-full text-xs p-2.5 border border-slate-200 rounded-lg focus:outline-none focus:border-blue-600">
+                    </div>
+                </div>
+
+                <!-- Buscador de Dominio .com -->
+    <!-- Buscador de Dominio .com -->
+    <div>
+    <label class="block text-xs font-semibold text-slate-700 mb-1">Dominio .com deseado</label>
+    <div class="flex gap-2">
+        <input 
+        type="text" 
+        id="checkoutDominio" 
+        placeholder="ejemplo: terrazajardin.com" 
+        onkeydown="if(event.key === 'Enter'){ event.preventDefault(); validarDominioModal(); }"
+        class="w-full text-xs p-2.5 border border-slate-200 rounded-lg focus:outline-none focus:border-blue-600"
+        >
+        <button 
+        type="button" 
+        onclick="validarDominioModal()" 
+        class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3.5 rounded-lg font-semibold border border-slate-200 transition cursor-pointer flex-shrink-0"
+        >
+        Verificar
+        </button>
+    </div>
+    <!-- Etiqueta donde se inyecta la respuesta -->
+    <p id="statusDominioModal" class="text-[11px] mt-1 hidden"></p>
+    </div>
+
+                <!-- Campos de la Tarjeta -->
+                <div class="pt-2">
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Información de la Tarjeta</label>
+                    <div class="border border-slate-200 rounded-lg p-3 bg-slate-50/50 space-y-3">
+                    <!-- Número de tarjeta -->
+                    <div class="relative">
+                    <input 
+    type="text" 
+    id="cardNumber" 
+    maxlength="19" 
+    inputmode="numeric" 
+    required 
+    placeholder="0000 0000 0000 0000" 
+    class="w-full text-xs p-2.5 border border-slate-200 rounded-lg bg-white focus:outline-none focus:border-blue-600 font-mono"
+    >
+                        <div class="absolute right-3 top-2.5 flex gap-1">
+                        <span class="text-[10px] bg-slate-200 px-1.5 py-0.5 rounded text-slate-600 font-bold">VISA</span>
+                        <span class="text-[10px] bg-slate-200 px-1.5 py-0.5 rounded text-slate-600 font-bold">MC</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Expiración y CVC -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                        <input 
+    type="text" 
+    id="cardExpiry" 
+    maxlength="5" 
+    inputmode="numeric" 
+    required 
+    placeholder="MM/AA" 
+    class="w-full text-xs p-2.5 border border-slate-200 rounded-lg bg-white focus:outline-none focus:border-blue-600 text-center font-mono"
+    >
+                        </div>
+                        <div>
+                        <input type="password" id="cardCvc" maxlength="4" required placeholder="CVC / CVV" class="w-full text-xs p-2.5 border border-slate-200 rounded-lg bg-white focus:outline-none focus:border-blue-600 text-center font-mono">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Botón de Pago Inmediato -->
+                <button type="submit" class="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2 transition cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 002-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    Pagar $2,499 MXN y Activar Sitio
+                </button>
+                </form>
+            </div>
+
+            <!-- COLUMNA DERECHA: RESUMEN Y OPCIÓN WHATSAPP (5 cols) -->
+            <div class="md:col-span-5 flex flex-col justify-between space-y-4 border-t md:border-t-0 md:border-l border-slate-100 pt-4 md:pt-0 md:pl-6">
+                <div>
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">2. Resumen de tu Sitio</h4>
+                
+                <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-3.5 space-y-2.5 text-xs text-slate-700">
+                    <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+                    <span class="text-slate-500">Plantilla:</span>
+                    <span id="summaryPlantilla" class="font-bold text-slate-800">Eventos & Salones</span>
+                    </div>
+                    <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+                    <span class="text-slate-500">Nombre del Negocio:</span>
+                    <span id="summaryNombre" class="font-bold text-slate-800 truncate max-w-[150px]">Terraza Jardín</span>
+                    </div>
+                    <div class="flex justify-between items-center pb-2 border-b border-slate-200">
+                    <span class="text-slate-500">Colores Elegidos:</span>
+                    <div class="flex items-center gap-1.5">
+                        <span id="summaryColor1" class="w-4 h-4 rounded-full border border-slate-300" style="background:#2563eb"></span>
+                        <span id="summaryColor2" class="w-4 h-4 rounded-full border border-slate-300" style="background:#0f766e"></span>
+                    </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                    <span class="text-slate-500">Logo Subido:</span>
+                    <div id="summaryLogoContainer">
+                        <span class="text-slate-400 italic text-[11px]">Por defecto</span>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Beneficios incluidos -->
+                <ul class="mt-4 space-y-1.5 text-[11px] text-slate-600">
+                    <li class="flex items-center gap-1.5">
+                    <span class="text-green-500 font-bold">✓</span> Dominio .com y Hosting por 1 año
+                    </li>
+                    <li class="flex items-center gap-1.5">
+                    <span class="text-green-500 font-bold">✓</span> Adaptado a celulares y tablets
+                    </li>
+                    <li class="flex items-center gap-1.5">
+                    <span class="text-green-500 font-bold">✓</span> Botón flotante a tu WhatsApp
+                    </li>
+                </ul>
+                </div>
+
+                <!-- Opción Alternativa: WhatsApp / Transferencia -->
+                <div class="pt-3 border-t border-slate-100">
+                <p class="text-[11px] text-slate-500 text-center mb-2">¿Prefieres pagar por transferencia o despejar dudas?</p>
+                <button onclick="comprarPorWhatsApp()" class="w-full py-2.5 px-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 transition shadow-md shadow-emerald-500/20">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    Solicitar por WhatsApp
+                </button>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Botón Flotante de WhatsApp -->
+    <a id="whatsappFloat"
+    href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20personalizar%20mi%20sitio%20web" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20ba5a] hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+    aria-label="Contactar por WhatsApp">
+        
+        <!-- Icono de WhatsApp -->
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+
+        <span class="absolute right-16 bg-slate-950 text-white text-xs font-medium px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">
+            ¿Necesitas ayuda?
+        </span>
+    </a>
+</body>
+</html>

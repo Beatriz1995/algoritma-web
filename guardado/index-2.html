@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritma: Creamos Soluciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="img/icono.ico">
+
+    <script src="js/listadopaquetes.js" defer></script>
+    <script src="js/paquetes.js" defer></script>
+</head>
+<body class="bg-gray-100  text-slate-800">
+
+    <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="contenedor-logo">
+                <img src="img/logo.png" alt="Algoritma">
+            </div>
+            <nav class="space-x-6 text-sm font-semibold text-slate-600">
+                <a href="#dudas" class="hover:text-indigo-600 transition">¿Tienes dudas?</a>
+                <a href="#templates" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Empezar</a>
+            </nav>
+        </div>
+    </header>
+
+        <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto py-20 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
+        <!-- COLUMNA 1: Textos y Botón -->
+        <div class="text-left">
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight leading-none mb-6">
+                Tu sitio web profesional, <br><span class="text-indigo-600">personalizado al instante</span>
+            </h1>
+            
+            <p class="text-lg text-slate-600 mb-8 max-w-xl">
+                Elige un diseño predefinido, ingresa los datos de tu negocio y mira cómo lucirá tu marca antes de pagar.
+            </p>
+            
+            <a href="#templates" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-indigo-100 hover:bg-indigo-700 transition-all">
+                Ver Paquetes Disponibles
+            </a>
+        </div>
+
+        <!-- COLUMNA 2: Imagen -->
+        <div class="w-full flex justify-center">
+            <img src="img/templeats.png" alt="Plantillas disponibles" class="w-full max-w-md md:max-w-full h-auto object-cover rounded-2xl shadow-xl">
+        </div>
+
+    </section>
+
+    <!-- Sección de Paquetes Disponibles -->
+    <section id="templates" class="max-w-7xl mx-auto px-6 py-24">
+        <!-- Encabezado de la sección -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-bold tracking-widest uppercase text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-full">Nuestras Soluciones</span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight mt-4 mb-4">
+                Elige el plan ideal para tu negocio
+            </h2>
+            <p class="text-lg text-slate-500">
+                Diseños profesionales adaptados al ritmo de crecimiento de tu marca. Elige un paquete y personaliza tu demo al instante.
+            </p>
+        </div>
+        
+        <!-- Contenedor de Tarjetas (Grid) - LE AGREGAMOS EL id="contenedor-paquetes-grid" -->
+        <div id="contenedor-paquetes-grid" class="grid lg:grid-cols-3 gap-8 items-stretch">
+            
+            <!-- 1. PAQUETE EXPRESS (Informativo / Landing) -->
+            <div onclick="seleccionarPlantilla('restaurante', 'Express', 'bg-amber-600', 'text-amber-600')" class="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 flex flex-col justify-between hover:border-slate-300 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <div>
+                    <!-- Encabezado Tarjeta -->
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="bg-slate-50 p-3 rounded-2xl text-2xl">🚀</div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2.5 py-1 rounded-md font-mono">Plan Esencial</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Web Express</h3>
+                    <p class="text-sm text-slate-500 mt-2 min-h-[40px]">Páginas planas, limpias y directas al grano. Ideal para servicios locales, marcas personales emergentes y cartas digitales (menús).</p>
+                    
+                    <hr class="my-6 border-slate-100">
+                    
+                    <!-- Lista de Características -->
+                    <ul class="space-y-4 text-sm text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span>Página web de una sola sección (Landing Page)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span>Información del negocio estructurada</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span><strong>Botón de acción directo a WhatsApp</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span>Enlaces a redes sociales y mapa interactivo</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Botón de Acción -->
+                <div class="mt-8">
+                    <a href="express.html">
+                    <button class="w-full bg-slate-50 hover:bg-slate-100 text-slate-800 text-sm py-3.5 px-4 rounded-xl font-semibold transition-colors flex justify-center items-center gap-2 border border-slate-200 pointer-events-none">
+                        Probar Demo Express <span>→</span>
+                    </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. PAQUETE PROFESIONAL (Público + Admin) -->
+            <div onclick="seleccionarPlantilla('corporate', 'Profesional', 'bg-blue-600', 'text-blue-600')" class="bg-white rounded-3xl border-2 border-indigo-600 shadow-xl p-8 flex flex-col justify-between relative transform lg:-translate-y-4 transition-all duration-300 cursor-pointer">
+                <!-- Distintivo de Plan Estrella -->
+                <span class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-indigo-600 text-white text-[11px] font-bold px-4 py-1 rounded-full uppercase tracking-widest shadow-sm">
+                    MÁS RECOMENDADO
+                </span>
+
+                <div>
+                    <!-- Encabezado Tarjeta -->
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="bg-indigo-50 p-3 rounded-2xl text-2xl">💼</div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md font-mono">Interactivo + Gestión</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Web Profesional</h3>
+                    <p class="text-sm text-slate-500 mt-2 min-h-[40px]">El sitio perfecto para ofrecer servicios. Una cara impecable al público y un potente gestor interno.</p>
+                    
+                    <hr class="my-6 border-slate-100">
+                    
+                    <!-- Lista de Características -->
+                    <ul class="space-y-4 text-sm text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span>Todo lo incluido en el paquete <strong>Express</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span class="text-slate-900 font-medium">✍️ Blog para SEO Local</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span class="text-slate-900 font-medium">🗂️ Estructura Multi-página</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span class="text-slate-900 font-medium">📆 Sistema de reservación y agendamiento de citas en línea</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span>Notificaciones por correo automáticas (Citas, contacto)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span><strong class="text-indigo-600">Panel Administrativo Privado:</strong> Gestiona tus citas, cambia fotos de la galería y edita textos fácilmente</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Botón de Acción Destacado -->
+                <div class="mt-8">
+                    <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white text-sm py-3.5 px-4 rounded-xl font-semibold shadow-lg shadow-indigo-100 transition-all flex justify-center items-center gap-2 pointer-events-none">
+                        Probar Demo Profesional <span>→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. PAQUETE BUSINESS (E-Commerce) -->
+            <div onclick="seleccionarPlantilla('fitness', 'Business', 'bg-emerald-600', 'text-emerald-600')" class="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 flex flex-col justify-between hover:border-slate-300 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <div>
+                    <!-- Encabezado Tarjeta -->
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="bg-slate-50 p-3 rounded-2xl text-2xl">💳</div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md font-mono">E-Commerce Completo</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">Web Business</h3>
+                    <p class="text-sm text-slate-500 mt-2 min-h-[40px]">Diseñado para negocios listos para vender productos físicos o digitales a gran escala en internet.</p>
+                    
+                    <hr class="my-6 border-slate-100">
+                    
+                    <!-- Lista de Características -->
+                    <ul class="space-y-4 text-sm text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span>Todo lo incluido en el paquete <strong>Profesional</strong></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span class="text-slate-900 font-medium">🛒 Tienda en línea con Carrito de compras integrado</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span>Pasarela de pagos segura (Tarjetas de Crédito/Débito, PayPal)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-indigo-600 font-bold text-lg leading-none">✓</span>
+                            <span>Panel administrativo con control de inventarios, stock y envíos</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Botón de Acción -->
+                <div class="mt-8">
+                    <button class="w-full bg-slate-50 hover:bg-slate-100 text-slate-800 text-sm py-3.5 px-4 rounded-xl font-semibold transition-colors flex justify-center items-center gap-2 border border-slate-200 pointer-events-none">
+                        Probar Demo Business <span>→</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Sección de Ayuda y Asesoría -->
+    <section id="dudas" class="bg-slate-50 border-t border-b border-slate-100 py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <!-- Etiqueta pequeña superior -->
+            <span class="text-indigo-600 text-sm font-semibold tracking-wider uppercase px-3 py-1 bg-indigo-50 rounded-full">
+                ¿Tienes dudas?
+            </span>
+            
+            <!-- Título principal de la sección -->
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mt-4 mb-6">
+                ¿No sabes por dónde empezar o no encuentras tu diseño ideal?
+            </h2>
+            
+            <!-- Párrafo aclaratorio (mantiene el filtro de que trabajas con plantillas) -->
+            <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                No te preocupes. Nuestro sistema está hecho para que personalices colores y contenido fácilmente, pero si te abruman las opciones o no sabes qué paquete se adapta mejor a tu negocio, **nosotros te guiamos para elegir y dejar lista tu plantilla**.
+            </p>
+            
+            <!-- Bloque de acciones / Tarjetas de opciones -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto text-left">
+                
+                <!-- Opción 1: Ayuda a elegir -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-slate-900 font-bold text-lg mb-2 flex items-center gap-2">
+                            <span class="text-indigo-600">💡</span> Te ayudamos a elegir
+                        </h3>
+                        <p class="text-slate-500 text-sm mb-6">
+                            Cuéntanos de qué es tu negocio y te recomendaremos la estructura exacta que necesitas.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/521234567890?text=Hola,%20no%20sé%20qué%20plantilla%20elegir%20para%20mi%20negocio,%20¿me%20ayudan?" 
+                    target="_blank" 
+                    class="text-indigo-600 font-semibold text-sm hover:text-indigo-700 transition-colors inline-flex items-center gap-1 group">
+                        Recibir asesoría 
+                        <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Opción 2: Diseño a medida sobre plantilla -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-slate-900 font-bold text-lg mb-2 flex items-center gap-2">
+                            <span class="text-indigo-600">🎨</span> Ajustes de identidad
+                        </h3>
+                        <p class="text-slate-500 text-sm mb-6">
+                            ¿Te gusta una plantilla pero no sabes cómo combinar tus colores o logotipo? Nosotros lo configuramos por ti.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/521234567890?text=Hola,%20tengo%20dudas%20sobre%20cómo%20adaptar%20mis%20colores%20y%20logo%20a%20las%20plantillas" 
+                    target="_blank" 
+                    class="text-indigo-600 font-semibold text-sm hover:text-indigo-700 transition-colors inline-flex items-center gap-1 group">
+                        Preguntar por ajustes 
+                        <span class="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Columna 1: Marca / Logo -->
+            <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-2">
+                    <!-- Tu Logo de Algoritma (puedes meter aquí tu SVG o img) -->
+                    <span class="text-white font-bold text-xl tracking-tight">Algoritma</span>
+                </div>
+                <p class="text-sm leading-relaxed max-w-xs">
+                    Tu sitio web profesional, personalizado al instante. Diseños predefinidos para impulsar tu marca.
+                </p>
+            </div>
+
+            <!-- Columna 2: Enlaces Rápidos -->
+            <div>
+                <h3 class="text-white font-semibold mb-4 tracking-wide text-sm uppercase">Navegación</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>
+                        <a href="#" class="hover:text-indigo-400 transition-colors">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#dudas" class="hover:text-indigo-400 transition-colors">¿Tienes dudas?</a>
+                    </li>                    
+                    <li>
+                        <a href="#templates" class="hover:text-indigo-400 transition-colors">Empezar</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Columna 3: Contacto / Legal -->
+            <div>
+                <h3 class="text-white font-semibold mb-4 tracking-wide text-sm uppercase">Soporte</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>
+                        <a href="https://wa.me/521234567890" target="_blank" class="hover:text-indigo-400 transition-colors flex items-center gap-1">
+                            Contacto por WhatsApp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-indigo-400 transition-colors">Términos y Condiciones</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Línea divisoria inferior de Copyright -->
+        <div class="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+            <p>&copy; 2026 Algoritma. Todos los derechos reservados.</p>
+            <p>Hecho con con el corazón para impulsar tu negocio.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20personalizar%20mi%20sitio%20web" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20ba5a] hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+    aria-label="Contactar por WhatsApp">
+        
+        <!-- Icono de WhatsApp (SVG limpio) -->
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+
+        <!-- Tooltip opcional que aparece al pasar el mouse -->
+        <span class="absolute right-16 bg-slate-950 text-white text-xs font-medium px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">
+            ¿Necesitas ayuda?
+        </span>
+    </a>
+</body>
+</html>

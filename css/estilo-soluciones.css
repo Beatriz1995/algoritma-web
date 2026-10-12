@@ -1,0 +1,670 @@
+ /* Importar la fuente directamente desde tu archivo CSS */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
+
+
+/* Estilos globales personalizados */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Regla para subir de nivel al cargar una imagen desde CSS */
+.hero-background {
+    background-image: url('../img/patron-fondo.png'); /* Usa ../ para salir de css/ e ingresar a img/ */
+}
+
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+
+header .contenedor-logo {
+    width: 200px; /* Tamaño del div en el header */
+    height: 50px;
+}
+
+header .contenedor-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+}
+
+
+
+ 
+ .demo-section {
+        padding: 80px 20px;
+        background-color: #f8fafc; /* Gris ultra claro para contrastar con el fondo blanco del Hero */
+    }
+
+    .demo-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .demo-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .demo-header h2 {
+        font-size: 24pt;
+        color: #1e293b; /* Slate oscuro */
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .demo-header p {
+        font-size: 13pt;
+        color: #64748b; /* Gris texto descriptivo */
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* Grid responsivo que se hace 1 columna en celular y 2 en PC */
+    .demo-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .demo-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 40px 30px;
+        flex: 1;
+        min-width: 300px;
+        max-width: 500px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+   /* Contenedor del icono: lo centramos, le damos forma y un fondo suave */
+    .card-icon {
+        width: 80px;               /* Tamaño del círculo del icono */
+        height: 80px;
+        background-color: #f1f5f9;  /* Un gris azulado ultra claro muy limpio */
+        border-radius: 50%;         /* Lo hace perfectamente redondo */
+        margin: 0 auto 20px auto;   /* Lo centra horizontalmente y lo separa del título */
+        display: flex;
+        align-items: center;        /* Centra la imagen verticalmente */
+        justify-content: center;     /* Centra la imagen horizontalmente */
+    }
+
+    /* Controlar el tamaño de la imagen dentro del icono */
+    .card-icon img {
+        width: 45px;                /* Reducimos la imagen a tamaño icono */
+        height: auto;               /* Mantiene la proporción */
+        object-fit: contain;
+    }
+
+    .demo-card h3 {
+        font-size: 16pt;
+        color: #0f172a;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .demo-card p {
+        font-size: 11pt;
+        color: #475569;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        flex-grow: 1; /* Hace que el texto use el espacio y los botones queden alineados abajo */
+    }
+
+    /* Estilos de los botones para que combinen con tu paleta */
+    .demo-btn {
+        display: block;
+        padding: 14px 24px;
+        font-size: 11pt;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .demo-btn:active {
+        transform: scale(0.98);
+    }
+
+    /* Botón principal (Morado/Azul de Algoritma) */
+    .btn-primary {
+        background-color: #4f46e5; /* Ajusta este color exactamente al de tu botón 'Empezar' */
+        color: #ffffff;
+    }
+
+    .btn-primary:hover {
+        background-color: #4338ca;
+    }
+
+    /* Botón secundario (Limpio / Outline) */
+    .btn-secondary {
+        background-color: #ffffff;
+        color: #4f46e5;
+        border: 2px solid #e2e8f0;
+    }
+
+    .btn-secondary:hover {
+        background-color: #f1f5f9;
+        border-color: #cbd5e1;
+    }
+
+    .benefits-section {
+        padding: 80px 20px;
+        background-color: #ffffff; /* Fondo blanco para contrastar con el gris claro de las demos */
+    }
+
+    .benefits-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .benefits-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .benefits-header h2 {
+        font-size: 24pt;
+        color: #1e293b;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .benefits-header p {
+        font-size: 13pt;
+        color: #64748b;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    /* Grid de 3 columnas responsivo */
+    .benefits-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .benefit-item {
+        flex: 1;
+        min-width: 280px;
+        max-width: 340px;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .benefit-icon-box {
+        width: 70px;
+        height: 70px;
+        background-color: #f1f5f9; /* Cambia a una variante muy clara de tu morado si gustas (ej: #eef2ff) */
+        border-radius: 50%;
+        font-size: 28pt;
+        line-height: 70px;
+        margin: 0 auto 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .benefit-item h3 {
+        font-size: 15pt;
+        color: #0f172a;
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .benefit-item p {
+        font-size: 11pt;
+        color: #475569;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+
+    .process-section {
+        padding: 80px 20px;
+        background-color: #f8fafc; /* Regresamos al gris ultra claro para mantener el ritmo de contraste */
+    }
+
+    .process-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .process-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .process-header h2 {
+        font-size: 24pt;
+        color: #1e293b;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .process-header p {
+        font-size: 13pt;
+        color: #64748b;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    /* Grid del proceso */
+    .process-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .process-step {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 40px 30px;
+        flex: 1;
+        min-width: 280px;
+        max-width: 350px;
+        position: relative;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        text-align: left;
+    }
+
+    /* Indicador del número del paso */
+    .step-badge {
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        width: 40px;
+        height: 40px;
+        background-color: #4f46e5; /* Asegúrate de que coincida con el color principal de Algoritma */
+        color: #ffffff;
+        border-radius: 50%;
+        font-size: 14pt;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+    }
+
+    .process-step h3 {
+        font-size: 15pt;
+        color: #0f172a;
+        margin-top: 10px;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .process-step p {
+        font-size: 11pt;
+        color: #475569;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .pricing-section {
+        padding: 80px 20px;
+        background-color: #ffffff; /* Alternamos a blanco puro */
+    }
+
+    .pricing-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .pricing-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .pricing-header h2 {
+        font-size: 24pt;
+        color: #1e293b;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .pricing-header p {
+        font-size: 13pt;
+        color: #64748b;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    /* Grid de Precios */
+    .pricing-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .price-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 40px 30px;
+        flex: 1;
+        min-width: 290px;
+        max-width: 380px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    /* Destacar el plan estrella (Menú QR) */
+    .price-card.featured {
+        border: 2px solid #4f46e5; /* El color de Algoritma */
+        box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.1), 0 4px 6px -2px rgba(79, 70, 229, 0.05);
+    }
+
+    .card-badge {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #4f46e5;
+        color: #ffffff;
+        padding: 6px 16px;
+        font-size: 9pt;
+        font-weight: 700;
+        border-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .price-card h3 {
+        font-size: 18pt;
+        color: #0f172a;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .card-description {
+        font-size: 10.5pt;
+        color: #64748b;
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        min-height: 60px;
+    }
+
+    /* Caja de precio */
+    .price-box {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #0f172a;
+    }
+
+    .currency {
+        font-size: 18pt;
+        font-weight: 600;
+        vertical-align: super;
+    }
+
+    .amount {
+        font-size: 36pt;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+
+    .period {
+        font-size: 11pt;
+        color: #64748b;
+        font-weight: 500;
+    }
+
+    /* Lista de características */
+    .price-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 35px 0;
+        flex-grow: 1;
+    }
+
+    .price-features li {
+        font-size: 11pt;
+        color: #475569;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+
+    /* Botones de acción */
+    .price-btn {
+        display: block;
+        text-align: center;
+        padding: 14px 24px;
+        font-size: 11pt;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.2s;
+    }
+
+    .btn-featured {
+        background-color: #4f46e5;
+        color: #ffffff;
+    }
+
+    .btn-featured:hover {
+        background-color: #4338ca;
+    }
+
+    .btn-standard {
+        background-color: #f1f5f9;
+        color: #1e293b;
+    }
+
+    .btn-standard:hover {
+        background-color: #e2e8f0;
+    }
+
+    .renewal-note {
+        font-size: 9pt;
+        color: #64748b;
+        text-align: center;
+        line-height: 1.4;
+        margin-top: auto; /* Empuja la nota hacia abajo */
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+
+
+    .faq-section {
+        padding: 80px 20px;
+        background-color: #f8fafc; /* Volvemos al gris claro para cerrar el contraste */
+    }
+
+    .faq-container {
+        max-width: 800px; /* Contenedor más estrecho para facilitar la lectura de textos largos */
+        margin: 0 auto;
+    }
+
+    .faq-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .faq-header h2 {
+        font-size: 24pt;
+        color: #1e293b;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .faq-header p {
+        font-size: 13pt;
+        color: #64748b;
+    }
+
+    /* Lista de Preguntas */
+    .faq-list {
+        margin-bottom: 60px;
+    }
+
+    .faq-item {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .faq-item h4 {
+        font-size: 13pt;
+        color: #0f172a;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .faq-item p {
+        font-size: 11pt;
+        color: #475569;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Banner de Confianza */
+    .trust-banner {
+        background-color: #ffffff;
+        border: 2px dashed #cbd5e1;
+        border-radius: 16px;
+        padding: 40px 30px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .trust-badge-icons {
+        font-size: 30pt;
+        margin-bottom: 10px;
+    }
+
+    .trust-banner h3 {
+        font-size: 16pt;
+        color: #1e293b;
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .trust-banner p {
+        font-size: 11pt;
+        color: #475569;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Bloque Final de Llamado a la Acción */
+    .final-cta {
+        text-align: center;
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        color: #ffffff;
+        border-radius: 20px;
+        padding: 50px 30px;
+        box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.3);
+    }
+
+    .final-cta h2 {
+        font-size: 22pt;
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #ffffff;
+    }
+
+    .final-cta p {
+        font-size: 12pt;
+        color: #94a3b8;
+        margin-bottom: 30px;
+    }
+
+    .cta-final-btn {
+        display: inline-block;
+        background-color: #25d366; /* Verde vibrante de WhatsApp */
+        color: #ffffff;
+        text-decoration: none;
+        padding: 16px 36px;
+        font-size: 13pt;
+        font-weight: bold;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .cta-final-btn:hover {
+        background-color: #20ba56;
+        transform: translateY(-2px);
+    }
+
+    /* Ajuste para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .demo-section {
+            padding: 50px 15px;
+        }
+        .demo-header h2 {
+            font-size: 20pt;
+        }
+        .demo-card {
+            padding: 30px 20px;
+        }
+
+        .benefits-section {
+            padding: 50px 15px;
+        }
+        .benefits-header h2 {
+            font-size: 20pt;
+        }
+        .benefits-grid {
+            gap: 30px;
+        }
+        .process-section {
+            padding: 60px 15px;
+        }
+        .process-header h2 {
+            font-size: 20pt;
+        }
+        .process-grid {
+            gap: 45px; /* Más espacio en móvil para que las burbujas flotantes no choquen con la tarjeta de arriba */
+            margin-top: 20px;
+        }
+        .pricing-section {
+            padding: 60px 15px;
+        }
+        .pricing-header h2 {
+            font-size: 20pt;
+        }
+        .price-card {
+            padding: 30px 20px;
+        }
+        .faq-section {
+            padding: 60px 15px;
+        }
+        .faq-header h2, .final-cta h2 {
+            font-size: 18pt;
+        }
+        .faq-item {
+            padding: 20px;
+        }
+        .cta-final-btn {
+            font-size: 11pt;
+            padding: 14px 24px;
+            width: 100%; /* Botón ancho completo en celulares */
+        }
+    }

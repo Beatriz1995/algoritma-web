@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritma: Creamos Soluciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>   
+    <link rel="stylesheet" href="css/estilo-soluciones.css">
+    <link rel="icon" type="image/png" href="img/icono.ico">
+</head>
+<body class="bg-gray-100  text-slate-800">
+
+    <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="contenedor-logo">
+                <img src="img/logo.png" alt="Algoritma">
+            </div>
+            <nav class="space-x-6 text-sm font-semibold text-slate-600">
+                <a href="#dudas" class="hover:text-indigo-600 transition">¿Tienes dudas?</a>
+                <a href="#templates" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Empezar</a>
+            </nav>
+        </div>
+    </header>
+
+        <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto py-20 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
+        <!-- COLUMNA 1: Textos y Botón -->
+        <div class="text-left">
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight leading-none mb-6">
+                Tu sitio web, <br>
+                <span class="text-indigo-600">personalizado en minutos</span>
+            </h1>
+            
+            <p class="text-lg text-slate-600 mb-8 max-w-xl">
+                Tus clientes escanean un código QR para ver tu menú desde su celular. 
+                <strong> Tú puedes actualizar precios, agregar nuevos productos y
+                 modificar tu catálogo</strong> al 
+                instante sin volver a gastar en imprenta.
+            </p>
+            
+            <a href="#templates" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-indigo-100 hover:bg-indigo-700 transition-all">
+                Empezar ahora
+            </a>
+        </div>
+
+        <!-- COLUMNA 2: Imagen -->
+        <div class="w-full flex justify-center">
+            <img src="img/soluciones/template menu.png" alt="Plantillas disponibles" class="w-full max-w-md md:max-w-full h-auto object-cover rounded-2xl shadow-xl">
+        </div>
+
+    </section>
+
+    <!-- SECCIÓN 2: MÍRALO EN ACCIÓN -->
+    <section class="demo-section">
+        <div class="demo-container">
+            
+            <div class="demo-header">
+                <h2>Míralo en acción: Dos formas de probar Algoritma</h2>
+                <p>No tienes que imaginar cómo funciona. Prueba nuestras demostraciones en vivo y experimenta el sistema antes de tomar una decisión.</p>
+            </div>
+
+            <div class="demo-grid">
+                
+                <!-- Tarjeta 1: Vista del Comensal -->
+                <div class="demo-card">
+                   <div class="card-icon" style="width: 80px; height: 80px; background-color: #eef2ff; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;">
+                        <img src="img/soluciones/icono-phone.png" alt="" 
+                        style="width: 40px !important; height: auto !important; object-fit: contain;">
+                    </div>
+                    <h3>La experiencia de tus clientes</h3>
+                    <p>Descubre lo rápido y limpio que tus comensales verán tus platillos. No es una foto borrosa de redes sociales; es una aplicación rápida, moderna y adaptada a cualquier teléfono celular.</p>
+                    <!-- Modifica el href cuando tengas tu subdominio listo, ej: https://demo.algoritma.com/menu -->
+                    <a href="#demo-menu" class="demo-btn btn-primary" onclick="alert('Aquí se abrirá la simulación de tu Menú QR interactivo en formato móvil.')">
+                        Probar Demo de Menú QR
+                    </a>
+                </div>
+
+                <!-- Tarjeta 2: Vista del Administrador -->
+                <div class="demo-card">
+                    <div class="card-icon" style="width: 80px; height: 80px; background-color: #eef2ff; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;">
+                        <img src="img/soluciones/configuracion.png" alt="" 
+                        style="width: 40px !important; height: auto !important; object-fit: contain;">
+                    </div>
+                    <h3>Tu panel de administración</h3>
+                    <p>Entra al panel donde tú mismo tendrás el control total de tu negocio. Mira lo sencillo que es cambiar el precio de un platillo, ocultar un producto agotado o agregar categorías en segundos.</p>
+                    <!-- Modifica el href cuando tengas tu subdominio listo, ej: https://panel.algoritma.com -->
+                    <a href="#demo-panel" class="demo-btn btn-secondary" onclick="alert('Aquí se abrirá el acceso de prueba a tu panel de administración (C# / Backend).')">
+                        Entrar al Panel de Prueba
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: VENTAJAS REALES -->
+    <section class="benefits-section">
+        <div class="benefits-container">
+            
+            <div class="benefits-header">
+                <h2>Por qué los restaurantes exitosos usan Menú QR</h2>
+                <p>Olvídate de los problemas de los menús impresos tradicionales. Toma el control total de la operación de tu negocio.</p>
+            </div>
+
+            <div class="benefits-grid">
+                
+                <!-- Ventaja 1: Ahorro -->
+                <div class="benefit-item">
+                    <div class="card-icon" style="width: 80px; height: 80px; background-color: #eef2ff; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;">
+                        <img src="img/soluciones/gastos.png" alt="" 
+                        style="width: 40px !important; height: auto !important; object-fit: contain;">
+                    </div>
+                    <h3>Cero gastos de imprenta</h3>
+                    <p>¿Subió el precio de la carne o el aguacate? No vuelvas a gastar miles de pesos en reimprimir menús ni les pongas parches feos. Cambia los precios en segundos sin gastar un solo centavo.</p>
+                </div>
+
+                <!-- Ventaja 2: Control -->
+                <div class="benefit-item">
+                    <div class="card-icon" style="width: 80px; height: 80px; background-color: #eef2ff; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;">
+                        <img src="img/soluciones/tiempo.png" alt="" 
+                        style="width: 40px !important; height: auto !important; object-fit: contain;">
+                    </div>
+                    <h3>Control total en tiempo real</h3>
+                    <p>Si un platillo o bebida se agota a mitad del servicio, ocúltalo desde tu celular en 10 segundos. Evita que tus clientes lo pidan y se lleven una mala experiencia porque ya no tienes disponibilidad.</p>
+                </div>
+
+                <!-- Ventaja 3: Operación -->
+                <div class="benefit-item">
+                    <div class="card-icon" style="width: 80px; height: 80px; background-color: #eef2ff; border-radius: 50%; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;">
+                        <img src="img/soluciones/velocidad.png" alt="" 
+                        style="width: 40px !important; height: auto !important; object-fit: contain;">
+                    </div>
+                    <h3>Servicio mucho más rápido</h3>
+                    <p>Tus comensales escanean el código QR en cuanto se sientan a la mesa y eligen qué pedir de inmediato. Tus meseros atenderán más rápido las mesas y mejorarás la rotación de tu negocio.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: EL PROCESO EN 3 PASOS -->
+    <section class="process-section">
+        <div class="process-container">
+
+            <div class="process-header">
+                <h2>Tu Menú QR activo en 3 simples pasos</h2>
+                <p>Nos saltamos los procesos lentos. Nos envías tu información y nosotros nos encargamos de todo el montaje técnico.</p>
+            </div>
+
+            <div class="process-grid">
+
+                <!-- Paso 1 -->
+                <div class="process-step">
+                    <div class="step-badge">1</div>
+                    <h3>Aseguras tu lugar</h3>
+                    <p>Eliges la solución ideal para tu negocio y realizas el anticipo del 50% de manera totalmente segura a través de nuestras pasarelas de pago protegidas.</p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="process-step">
+                    <div class="step-badge">2</div>
+                    <h3>Nos mandas tu información</h3>
+                    <p>Nos compartes la lista de tus platillos, precios, logo y fotos directamente por WhatsApp. No necesitas instalar nada ni saber de tecnología; nosotros lo estructuramos por ti.</p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="process-step">
+                    <div class="step-badge">3</div>
+                    <h3>¡Lanzamiento en 48 horas!</h3>
+                    <p>Te entregamos el acceso a tu menú interactivo para revisar los últimos detalles. En cuanto nos das el visto bueno, tu código QR queda listo para imprimirse y colocarse en tus mesas.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+<!-- SECCIÓN 5: PAQUETES DISPONIBLES (CORREGIDO) -->
+    <section class="pricing-section">
+        <div class="pricing-container">
+
+            <div class="pricing-header">
+                <h2>Planes a la medida de tu negocio</h2>
+                <p>Precios transparentes y sin sorpresas. Elige la solución que necesitas para empezar a recibir clientes esta misma semana.</p>
+            </div>
+
+            <div class="pricing-grid">
+
+                <!-- Plan 1: Menú QR -->
+                <div class="price-card featured">
+                    <div class="card-badge">El más vendido</div>
+                    <h3>Menú Digital QR</h3>
+                    <p class="card-description">Ideal para restaurantes, cafeterías, pizzerías y negocios de comida que buscan modernizarse ya.</p>
+                    
+                    <div class="price-box">
+                        <span class="currency">$</span>
+                        <span class="amount">299</span>
+                        <span class="period">/ mes</span>
+                    </div>
+
+                    <ul class="price-features">
+                        <li>✓ Código QR personalizado para tus mesas</li>
+                        <li>✓ Carga de hasta 50 platillos y categorías</li>
+                        <li>✓ Actualización de precios en tiempo real</li>
+                        <li>✓ Fotos y descripciones de productos</li>
+                        <li>✓ Botón directo para pedidos por WhatsApp</li>
+                        <li>✓ Hosting VPS de alta velocidad incluido</li>
+                    </ul>
+
+                    <a href="https://wa.me/tu_numero_aqui?text=Hola,%20me%20interesa%20el%20Plan%20Menu%20QR" class="price-btn btn-featured" target="_blank">
+                        Contratar Menú QR
+                    </a>
+                </div>
+
+                <!-- Plan 2: Web Express (Anualidad Protegida) -->
+                <div class="price-card">
+                    <h3>Página Web Express</h3>
+                    <p class="card-description">Perfecta para profesionales, servicios locales o marcas que solo necesitan presencia profesional en internet.</p>
+                    
+                    <div class="price-box">
+                        <span class="currency">$</span>
+                        <span class="amount">1,499</span>
+                        <span class="period">/ primer año</span>
+                    </div>
+
+                    <ul class="price-features">
+                        <li>✓ Diseño responsivo (adaptado a celulares)</li>
+                        <li>✓ Sección sobre tus servicios y negocio</li>
+                        <li>✓ Galería de imágenes o catálogo sencillo</li>
+                        <li>✓ Botones de contacto y mapa interactivo</li>
+                        <li>✓ Enlaces directos a tus redes sociales</li>
+                        <li>✓ Hosting VPS y seguridad SSL por 12 meses</li>
+                    </ul>
+
+                    <!-- Nota aclaratoria para cobrar el siguiente año -->
+                    <p class="renewal-note">* Renovación anual de solo $499 a partir del segundo año (incluye hosting, dominio y soporte básico).</p>
+
+                    <a href="https://wa.me/tu_numero_aqui?text=Hola,%20me%20interesa%20la%20Pagina%20Web%20Express" class="price-btn btn-standard" target="_blank">
+                        Contratar Web Express
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN 6: PREGUNTAS FRECUENTES Y CIERRE DE CONFIANZA -->
+    <section class="faq-section">
+        <div class="faq-container">
+
+            <div class="faq-header">
+                <h2>Preguntas Frecuentes</h2>
+                <p>¿Tienes dudas? Aquí te respondemos las preguntas más comunes de nuestros clientes.</p>
+            </div>
+
+            <!-- Bloque de Acordeón de Preguntas -->
+            <div class="faq-list">
+                
+                <div class="faq-item">
+                    <h4>¿Tengo que pagar antes de ver cómo quedará mi diseño?</h4>
+                    <p>¡Para nada! Eliges el estilo, nos compartes los datos básicos de tu negocio y te mostraremos un boceto preliminar de cómo lucirá tu marca antes de que realices cualquier pago de anticipo.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Qué pasa si cambian mis precios o mis platillos después?</h4>
+                    <p>Tendrás acceso a tu propio panel de administración intuitivo. Desde ahí podrás cambiar precios, ocultar productos agotados o agregar categorías en 10 segundos desde tu celular, sin pagar extras por mantenimiento.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿El código QR tiene algún límite de escaneos?</h4>
+                    <p>No, tus clientes pueden escanear el código QR en las mesas de forma ilimitada las 24 horas del día. Nuestro sistema está hospedado en servidores de alta velocidad listos para soportar todo el tráfico de tu restaurante.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>¿Cómo imprimo mis códigos QR?</h4>
+                    <p>Una vez que aprobemos tu menú, te entregamos el archivo digital de tu código QR en alta definición. Puedes imprimirlo en stickers, acrílicos para las mesas, lonas o menús físicos individuales.</p>
+                </div>
+
+            </div>
+
+            <!-- Banner de Confianza / Garantía -->
+            <div class="trust-banner">
+                <div class="trust-badge-icons">
+                    <div class="card-icon" style="width: 80px; height: 80px; background-color: #eef2ff;  margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center;">
+                        <img src="img/soluciones/seguridad.png" alt="" 
+                        style="width: 50px !important; height: auto !important; object-fit: contain;">
+                        <img src="img/soluciones/tarjeta.png" alt="" 
+                        style="width: 50px !important; height: auto !important; object-fit: contain;">
+                           <img src="img/soluciones/autorizar.png" alt="" 
+                        style="width: 50px !important; height: auto !important; object-fit: contain;">
+                    </div>
+                </div>
+                <h3>Tu inversión está 100% protegida</h3>
+                <p>Procesamos nuestros anticipos y pagos mediante plataformas encriptadas de confianza global como <strong>Stripe</strong> y <strong>Mercado Pago</strong>. No almacenamos tus datos bancarios y garantizamos la entrega de tu proyecto en tiempo récord.</p>
+            </div>
+
+            <!-- Botón de Cierre Masivo -->
+            <div class="final-cta">
+                <h2>¿Listo para digitalizar tu negocio?</h2>
+                <p>Platícanos tu idea hoy mismo por WhatsApp y estrena tu menú o página web esta misma semana.</p>
+                <a href="https://wa.me/tu_numero_aqui?text=Hola,%20quiero%20iniciar%20mi%20proyecto%20con%20Algoritma" class="cta-final-btn" target="_blank">
+                    📲 Iniciar mi Proyecto por WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Columna 1: Marca / Logo -->
+            <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-2">
+                    <!-- Tu Logo de Algoritma (puedes meter aquí tu SVG o img) -->
+                    <span class="text-white font-bold text-xl tracking-tight">Algoritma</span>
+                </div>
+                <p class="text-sm leading-relaxed max-w-xs">
+                    Tu sitio web profesional, personalizado al instante. Diseños predefinidos para impulsar tu marca.
+                </p>
+            </div>
+
+            <!-- Columna 2: Enlaces Rápidos -->
+            <div>
+                <h3 class="text-white font-semibold mb-4 tracking-wide text-sm uppercase">Navegación</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>
+                        <a href="#" class="hover:text-indigo-400 transition-colors">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#dudas" class="hover:text-indigo-400 transition-colors">¿Tienes dudas?</a>
+                    </li>                    
+                    <li>
+                        <a href="#templates" class="hover:text-indigo-400 transition-colors">Empezar</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Columna 3: Contacto / Legal -->
+            <div>
+                <h3 class="text-white font-semibold mb-4 tracking-wide text-sm uppercase">Soporte</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>
+                        <a href="https://wa.me/521234567890" target="_blank" class="hover:text-indigo-400 transition-colors flex items-center gap-1">
+                            Contacto por WhatsApp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-indigo-400 transition-colors">Términos y Condiciones</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Línea divisoria inferior de Copyright -->
+        <div class="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+            <p>&copy; 2026 Algoritma. Todos los derechos reservados.</p>
+            <p>Hecho con con el corazón para impulsar tu negocio.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/521234567890?text=Hola,%20me%20interesa%20personalizar%20mi%20sitio%20web" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20ba5a] hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+    aria-label="Contactar por WhatsApp">
+        
+        <!-- Icono de WhatsApp (SVG limpio) -->
+        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.455h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+
+        <!-- Tooltip opcional que aparece al pasar el mouse -->
+        <span class="absolute right-16 bg-slate-950 text-white text-xs font-medium px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">
+            ¿Necesitas ayuda?
+        </span>
+    </a>
+</body>
+</html>
